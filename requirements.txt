@@ -1,0 +1,6 @@
+transformers>=4.56
+peft
+trl
+datasets
+huggingface_hub
+# AgentTune: pip install 'git+https://github.com/Lexsi-Labs/AgentTune.git'

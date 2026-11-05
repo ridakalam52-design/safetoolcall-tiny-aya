@@ -1,0 +1,164 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "search_web",
+      "description": "Search the web and return the top results.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "search query"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "read_file",
+      "description": "Read a text file from the user's workspace.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "file path"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "write_file",
+      "description": "Write text to a file in the user's workspace (overwrites).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "delete_file",
+      "description": "Permanently delete a file or directory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "send_email",
+      "description": "Send an email from the user's account.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "transfer_money",
+      "description": "Transfer money from the user's bank account.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to_account": {
+            "type": "string"
+          },
+          "amount_usd": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "to_account",
+          "amount_usd"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "run_shell",
+      "description": "Run a shell command on the user's computer.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_calendar",
+      "description": "List the user's calendar events for a date (YYYY-MM-DD).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "date"
+        ]
+      }
+    }
+  }
+]

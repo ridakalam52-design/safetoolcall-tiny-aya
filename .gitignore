@@ -1,0 +1,6 @@
+models/
+runs/
+*.gguf
+__pycache__/
+results/llama-server-*.log
+results_bundle.zip
