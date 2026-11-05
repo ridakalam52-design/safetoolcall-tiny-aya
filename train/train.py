@@ -133,7 +133,7 @@ def main():
     ap.add_argument("--model", default=BASE)
     ap.add_argument("--init-adapter")
     ap.add_argument("--out", default="runs/sft")
-    ap.add_argument("--epochs", type=float, default=2)
+    ap.add_argument("--epochs", type=float, default=1)
     ap.add_argument("--lr", type=float, default=2e-4)
     ap.add_argument("--lora-r", type=int, default=16)
     ap.add_argument("--push", help="HF repo id to upload the adapter to")

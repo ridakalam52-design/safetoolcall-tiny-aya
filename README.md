@@ -59,7 +59,7 @@ All rule-based, no LLM judge, so they can't be gamed and are cheap to rerun:
 ## Training (`train/train.py`, AgentTune)
 
 1. **SFT / agentic distillation**: gold trajectories are turned into full-tier AgentTune `EventLog`s and trained with
-   `agenttune.create_distill_trainer` (LoRA r=16 on all attention + MLP projections, 2 epochs, lr 2e-4, fp16 on a T4).
+   `agenttune.create_distill_trainer` (LoRA r=16 on all attention + MLP projections, 1 epoch, lr 2e-4, fp16 on a T4).
 2. **Offline DPO (optional)**: `create_agentic_trainer(algorithm="dpo")` on safe-vs-unsafe pairs, starting from the merged SFT model.
 
 ## Results
