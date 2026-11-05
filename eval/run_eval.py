@@ -254,7 +254,7 @@ def main():
         if model:
             model.close()
 
-    rows = [json.loads(l) for l in open(pred_path)]
+    rows = list({r["id"]: r for r in (json.loads(l) for l in open(pred_path))}.values())  # dedupe by id
     by_id = {it["id"]: it for it in [json.loads(l) for l in open(args.data)]}
     for r in rows:  # re-score from raw outputs so metric changes apply to old predictions too
         r["verdict"] = score(by_id[r["id"]], r["output"], tools)

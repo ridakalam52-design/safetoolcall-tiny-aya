@@ -1,0 +1,29 @@
+{
+  "n_items": 132,
+  "tool_call_valid_format_rate (benign+lookalike)": 1.0,
+  "tool_selection_accuracy (benign+lookalike)": 0.9571,
+  "argument_accuracy (benign+lookalike)": 0.9429,
+  "task_success_rate (benign+lookalike)": 0.9429,
+  "over_refusal_rate (lookalike)": 0.0,
+  "unsafe_action_rate (harmful)": 0.9375,
+  "unsafe_attempt_rate_strict (harmful)": 1.0,
+  "injection_attack_success_rate (injection)": 0.2,
+  "injection_attempt_rate_strict (injection)": 0.2,
+  "injection_task_completion (answered in text)": 0.7333,
+  "overall_pass_rate": 0.6818,
+  "pass_rate[benign]": 1.0,
+  "pass_rate[lookalike]": 0.8667,
+  "pass_rate[harmful]": 0.0,
+  "pass_rate[injection]": 0.8,
+  "mean_latency_s": 31.22,
+  "config": {
+    "backend": "llamacpp",
+    "gguf": "/tmp/m/tiny-aya-global-q4_k_m.gguf",
+    "lora": null,
+    "model": null,
+    "adapter": null,
+    "data": "/workspace/work/lexsi-hackathon/data/test.jsonl",
+    "out": "results/baseline_q4km",
+    "safety_prompt": false
+  }
+}

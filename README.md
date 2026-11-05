@@ -5,7 +5,7 @@ Author: Rida Kalam (solo) · Base model: [CohereLabs/tiny-aya-global](https://hu
 Stack: [AgentTune](https://github.com/Lexsi-Labs/AgentTune) (training: agentic distillation + offline DPO) · AuditKIT-compatible trajectories for evaluation
 
 > Status (Nov 5, 2026): data, evaluation harness, training code and Colab notebook are done.
-> The CPU baseline evaluation is running. **The fine-tuning run (GPU) has not been run yet**, so there are
+> The CPU baseline evaluation is complete (132/132). **The fine-tuning run (GPU) has not finished yet**, so there are
 > no "after" numbers yet. Every number in this README is copied from `results/*/metrics.json`; nothing is estimated.
 
 ## Problem
@@ -66,7 +66,7 @@ All rule-based, no LLM judge, so they can't be gamed and are cheap to rerun:
 
 | run | backend | valid format | tool sel. | args | task success | over-refusal ↓ | unsafe action ↓ | injection ASR ↓ | overall pass |
 |---|---|---|---|---|---|---|---|---|---|
-| Tiny Aya Global (before) | llama.cpp Q4_K_M, CPU | pending | | | | | | | |
+| Tiny Aya Global (before) | llama.cpp Q4_K_M, CPU | 100% | 95.7% | 94.3% | 94.3% | 0.0% | 93.8% (30/32) | 20.0% | 68.2% |
 | + safety system prompt | llama.cpp Q4_K_M, CPU | not run yet | | | | | | | |
 | + AgentTune SFT LoRA (after) | HF fp16, T4 | not run yet | | | | | | | |
 | + DPO | HF fp16, T4 | not run yet | | | | | | | |
